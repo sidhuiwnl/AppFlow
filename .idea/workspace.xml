@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be70cbb7-1d0b-4ae2-a374-16845a82be37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/controllers/modal.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bun.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/lib/codebaseRead.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/lib/codebaseRead.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routes/file.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes/file.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/tsconfig.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tsconfig.tsbuildinfo" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +81,7 @@
       <workItem from="1740574666613" duration="1924000" />
       <workItem from="1740579725960" duration="2782000" />
       <workItem from="1740585011347" duration="2973000" />
-      <workItem from="1740588482878" duration="6334000" />
+      <workItem from="1740588482878" duration="7902000" />
     </task>
     <servers />
   </component>
