@@ -1,10 +1,12 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import {modal} from "@/lib/model.ts";
+import {modal} from "@/lib/model.tsx";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+
+
 
 export  function cleanMermaid(mermaidCode : string){
 
