@@ -11,14 +11,14 @@ const router  = Router();
 router.post("/remoteUrl",(req : Request,res: Response)=>{
     const { remoteUrl } = req.body;
 
-
+    console.log(remoteUrl);
 
     if(!remoteUrl){
         res.status(404).send("No remote URL found!");
         return;
     }
     try{
-       exec(`npx repomix  --remote ${remoteUrl}`,async(error,stdout,stderr)=>{
+       exec(`npx repomix --remote ${remoteUrl}`,async(error,stdout,stderr)=>{
             if (error) return res.status(500).json({ error: error.message });
             if (stderr) return res.status(500).json({ error: stderr });
 
@@ -26,11 +26,15 @@ router.post("/remoteUrl",(req : Request,res: Response)=>{
             if(stdout.includes("Your repository has been successfully packed.")){
                 const data=  fs.readFileSync('repomix-output.txt',"utf-8");
 
+
+
                 const response = await getSequenceDiagram(data);
 
 
 
-                const sequenceCode = cleanSequenceCode(response);
+                const sequenceCode = await cleanSequenceCode(response);
+
+
 
                 res.status(200).json({
                     status:"success",
