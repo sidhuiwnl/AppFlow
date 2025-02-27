@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be70cbb7-1d0b-4ae2-a374-16845a82be37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/GraphGenerator.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/MermaidVisualizer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routes/file.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes/file.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/bun.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GraphGenerator.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +89,7 @@
       <workItem from="1740588482878" duration="8921000" />
       <workItem from="1740647084588" duration="7000" />
       <workItem from="1740650350571" duration="610000" />
-      <workItem from="1740654955647" duration="4380000" />
+      <workItem from="1740654955647" duration="9192000" />
     </task>
     <servers />
   </component>

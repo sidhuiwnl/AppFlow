@@ -1,8 +1,8 @@
 import {Input} from "@/components/ui/input.tsx";
 import {useState} from "react";
 import {Button} from "@/components/ui/button.tsx";
-import GraphGenerator from "@/components/GraphGenerator.tsx";
 
+import MermaidVisualizer from "@/components/MermaidVisualizer.tsx";
 
 export default function Main(){
     const[githubUrl, setGithubUrl] = useState<string>("");
@@ -49,8 +49,10 @@ export default function Main(){
                     Generate</Button>
             </div>
             {
-                diagramCode ?  <GraphGenerator diagramCode={diagramCode} /> : null
+                diagramCode ?
+                    <MermaidVisualizer diagramCode={diagramCode}/> : null
             }
+
 
         </div>
     )
