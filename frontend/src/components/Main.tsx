@@ -51,7 +51,10 @@ export default function Main(){
             </div>
             {
                 diagramCode ?
-                    <MermaidVisualizer diagramCode={diagramCode}/>
+                    <div className="w-[1600px] h-50 relative">
+                        <MermaidVisualizer diagramCode={diagramCode} setDiagramCode={setDiagramCode}/>
+                    </div>
+
                     :
                     <div className="py-20">
                         <FlowCard/>
