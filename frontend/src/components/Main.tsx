@@ -3,6 +3,7 @@ import {useState} from "react";
 import {Button} from "@/components/ui/button.tsx";
 
 import MermaidVisualizer from "@/components/MermaidVisualizer.tsx";
+import FlowCard from "@/components/FlowCard.tsx";
 
 export default function Main(){
     const[githubUrl, setGithubUrl] = useState<string>("");
@@ -50,7 +51,12 @@ export default function Main(){
             </div>
             {
                 diagramCode ?
-                    <MermaidVisualizer diagramCode={diagramCode}/> : null
+                    <MermaidVisualizer diagramCode={diagramCode}/>
+                    :
+                    <div className="py-20">
+                        <FlowCard/>
+                    </div>
+
             }
 
 
