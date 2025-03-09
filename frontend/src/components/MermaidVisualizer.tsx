@@ -16,36 +16,13 @@ mermaid.initialize({
     fontFamily: "Inter, sans-serif",
 })
 
-//
-// const defaultMermaidCode = `sequenceDiagram
-//     participant User
-//     participant CodeEditor
-//     participant LanguageSelector
-//     participant Websocket
-//     participant Output
-//     participant API
-//
-//     User->>LanguageSelector: Selects Language
-//     LanguageSelector->>CodeEditor: Updates language and code
-//     CodeEditor->>Websocket: Sends 'language_change' message (language, code)
-//     Websocket->>CodeEditor: Broadcasts 'language_change' message (language, code)
-//     CodeEditor->>CodeEditor: Updates editor content
-//     User->>CodeEditor: Edits Code
-//     CodeEditor->>Websocket: Sends 'code_change' message (code)
-//     Websocket->>CodeEditor: Broadcasts 'code_change' message (code)
-//     CodeEditor->>CodeEditor: Updates editor content
-//     User->>CodeEditor: Clicks "Run Code"
-//     CodeEditor->>Output: Triggers code execution
-//     Output->>API: Sends code and language for execution
-//     API->>Output: Returns execution result (output, stderr)
-//     Output->>Websocket: Sends 'output' message (output)
-//     Websocket->>Output: Broadcasts 'output' message (output)
-//     Output->>Output: Updates output display`
 
 export default function MermaidVisualizer({
-    diagramCode,
+                                              diagramCode,
+    setDiagramCode,
                                           }:{
-    diagramCode:string
+    diagramCode:string,
+    setDiagramCode : (textCode : string) => void
 }) {
 
     const [svg, setSvg] = useState("")
@@ -58,8 +35,6 @@ export default function MermaidVisualizer({
     const renderMermaid = async () => {
         try {
             setError(null)
-
-
             const { svg } = await mermaid.render("mermaid-diagram", diagramCode)
 
             setSvg(svg)
@@ -164,7 +139,7 @@ export default function MermaidVisualizer({
                         <TabsContent value="code" className="mt-0">
                             <Textarea
                                 value={diagramCode}
-                                // onChange={(e) => setMermaidCode(e.target.value)}
+                                onChange={(e) => setDiagramCode(e.target.value)}
                                 className="font-mono text-sm min-h-[500px] max-h-[600px] resize-none"
                                 placeholder="Enter your Mermaid code here..."
                             />
@@ -192,4 +167,3 @@ export default function MermaidVisualizer({
         </div>
     )
 }
-

@@ -1,31 +1,40 @@
 import {model} from "../controllers/modal";
+import * as fs from "node:fs";
 
-export async function getGeminiResponse(prompt : string) : Promise<string> {
-    try {
-        const sequenceSum = await model.generateContent(prompt)
+export async function getTxtData(prompt: string){
 
-        return sequenceSum.response.text();
-    }catch(err){
-        return "Error getting gemini response";
+    const fileContent = fs.readFileSync("repomix-output.txt", "utf8");
+    const base64Data = Buffer.from(fileContent).toString("base64");
+
+    const systemPrompt = `You are an AI assistant trained to provide precise and clear responses. 
+    Follow these rules when answering:
+    - Keep responses concise and to the point.
+    - Avoid unnecessary details and focus only on relevant information.
+    - Structure answers in bullet points or numbered lists when helpful.
+    - Do not make assumptions; base your response strictly on the given data.`;
+
+    const finalPrompt = `${systemPrompt}\n\nUser Query: ${prompt}`;
+
+    const result  = await model.generateContentStream([
+        {
+            inlineData : {
+                data : base64Data,
+                mimeType : "text/plain"
+            }
+        },
+       finalPrompt
+
+    ])
+
+    let response = ""
+
+    for await (const chunk of result.stream){
+        const chunkText = chunk.text();
+        response += chunkText;
     }
+
+    return response;
 }
 
-export async function getSequenceDiagram(repomixFinal : string){
-    const prompt = `Generate a Mermaid sequence diagram code for a workflow based on the following description:
 
-Description: ${repomixFinal}
 
-Please provide only the Mermaid code that represents this workflow as a sequence diagram. Use 'sequenceDiagram' syntax instead of 'graph TD'. Show the interactions between different participants in the workflow. Keep the syntax simple.
-
-Mermaid code:`;
-
-    const sequenceCode   = getGeminiResponse(prompt);
-
-    return sequenceCode;
-}
-
-export async function cleanSequenceCode(sequenceCode : string){
-    const cleanCode = sequenceCode.replace("```mermaid","").replace("```","").trim();
-
-    return cleanCode;
-}
