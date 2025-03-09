@@ -35,8 +35,6 @@ export default function MermaidVisualizer({
     const renderMermaid = async () => {
         try {
             setError(null)
-
-
             const { svg } = await mermaid.render("mermaid-diagram", diagramCode)
 
             setSvg(svg)

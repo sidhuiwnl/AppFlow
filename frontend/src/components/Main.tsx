@@ -1,15 +1,23 @@
 import {Input} from "@/components/ui/input.tsx";
 import {useState} from "react";
 import {Button} from "@/components/ui/button.tsx";
+import {toast} from "sonner";
+import {useNavigate} from "react-router";
 
-import MermaidVisualizer from "@/components/MermaidVisualizer.tsx";
-import FlowCard from "@/components/FlowCard.tsx";
 
 export default function Main(){
+    const navigate = useNavigate();
     const[githubUrl, setGithubUrl] = useState<string>("");
-    const[diagramCode,setDiagramCode] = useState<string>("");
 
-    async function getSequenceCode(){
+    async function handleSequenceCode(){
+
+        if (!githubUrl.trim()) {
+            toast.error("Please enter a valid GitHub URL or repository.");
+            return;
+        }
+
+        toast.message("Processing your requested codebase");
+
         const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/file/remoteUrl`,{
             method : "POST",
             headers : {
@@ -17,20 +25,27 @@ export default function Main(){
             },
             body : JSON.stringify({
                 remoteUrl : githubUrl,
+                prompt : prompt,
             })
         })
 
         const data = await response.json();
-        setDiagramCode(data.message)
+
+        if(data.status === "success"){
+            toast.success(data.data);
+            navigate("/chat")
+        }else{
+            toast.error(data.data);
+        }
 
     }
-    console.log(diagramCode)
+
     return (
-        <div className="flex flex-col justify-center items-center py-20 space-y-4 ">
+        <div className="flex flex-col justify-center items-center py-20 space-y-4 h-screen ">
             <h1 className="text-6xl font-medium">AppFlow</h1>
-            <p className="text-2xl font-medium">Generate stunning Flowcharts for your projects effortlessly.</p>
+            <p className="text-2xl font-medium">Add your codebase and talk with it to understand the working.</p>
             <label htmlFor={"github"}>Github URl or user/repo</label>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 ">
                 <Input
                     name="github"
                     id="github"
@@ -43,25 +58,14 @@ export default function Main(){
                     }}
                     value={githubUrl}
                 />
+
                 <Button
-                    onClick={getSequenceCode}
+                    onClick={handleSequenceCode}
                     className="h-10"
                 >
-                    Generate</Button>
+                     Generate
+                        </Button>
             </div>
-            {
-                diagramCode ?
-                    <div className="w-[1600px] h-50 relative">
-                        <MermaidVisualizer diagramCode={diagramCode} setDiagramCode={setDiagramCode}/>
-                    </div>
-
-                    :
-                    <div className="py-20">
-                        <FlowCard/>
-                    </div>
-
-            }
-
 
         </div>
     )

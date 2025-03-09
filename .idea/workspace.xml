@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be70cbb7-1d0b-4ae2-a374-16845a82be37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/actions/action.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Chat.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/controllers/modal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/modal.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/lib/codebaseRead.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/lib/codebaseRead.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/tsconfig.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tsconfig.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/file.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes/file.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/bun.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/MermaidVisualizer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/MermaidVisualizer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +54,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;sid/working&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/projects/BasicHTMl/hash-routing&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projects/Monorepo/mobfit&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -101,7 +105,17 @@
       <workItem from="1740886642819" duration="2001000" />
       <workItem from="1740890259067" duration="7186000" />
       <workItem from="1740898860089" duration="1124000" />
-      <workItem from="1740900013095" duration="2982000" />
+      <workItem from="1740900013095" duration="3416000" />
+      <workItem from="1740912440757" duration="5000" />
+      <workItem from="1740914765781" duration="1633000" />
+      <workItem from="1740918332895" duration="5606000" />
+      <workItem from="1740925037223" duration="97000" />
+      <workItem from="1740928168772" duration="6000" />
+      <workItem from="1740931096842" duration="2374000" />
+      <workItem from="1741002812259" duration="9000" />
+      <workItem from="1741499776683" duration="3153000" />
+      <workItem from="1741510897267" duration="6822000" />
+      <workItem from="1741525318392" duration="3063000" />
     </task>
     <servers />
   </component>
