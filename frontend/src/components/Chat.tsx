@@ -24,7 +24,7 @@ export default function ChatInterface() {
         setTextAreaValue("");
 
         try {
-            const response = await fetch("http://localhost:3000/api/v1/file/talk", {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/file/talk`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ prompt: textAreaValue }),
