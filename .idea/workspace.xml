@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="be70cbb7-1d0b-4ae2-a374-16845a82be37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Chat.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +37,7 @@
   <component name="ProjectId" id="2tZSfSAhxIrRHMA5Woq1ekoq2q0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
@@ -102,7 +107,9 @@
       <workItem from="1741002812259" duration="9000" />
       <workItem from="1741499776683" duration="3153000" />
       <workItem from="1741510897267" duration="6822000" />
-      <workItem from="1741525318392" duration="3729000" />
+      <workItem from="1741525318392" duration="4433000" />
+      <workItem from="1741544179121" duration="7000" />
+      <workItem from="1742131569900" duration="2109000" />
     </task>
     <servers />
   </component>
